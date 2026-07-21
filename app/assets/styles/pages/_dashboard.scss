@@ -1,0 +1,85 @@
+@use "../abstracts/variables" as *;
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-title {
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 28px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.dashboard-section {
+  margin-top: 28px;
+}
+
+.hours-card__title {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 16px;
+}
+
+.hours-row span {
+  color: $text-secondary;
+}
+
+.hours-divider {
+  margin: 20px 0;
+  border: none;
+  border-top: 1px solid $border;
+}
+
+.hours-remaining {
+  display: flex;
+  flex-direction: column;
+
+  font-size: 40px;
+  font-weight: 700;
+
+  color: $primary;
+}
+
+.hours-remaining small {
+  margin-top: 6px;
+
+  font-size: 14px;
+  font-weight: 400;
+
+  color: $text-secondary;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.status-safe {
+  color: $success;
+  font-weight: 600;
+}
+
+.status-warning {
+  color: $warning;
+  font-weight: 600;
+}
+
+.status-danger {
+  color: $danger;
+  font-weight: 600;
+}

@@ -1,0 +1,28 @@
+@use "../abstracts/variables" as *;
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.input-label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.input {
+  padding: 14px 16px;
+
+  border: 1px solid $border;
+
+  border-radius: $radius;
+
+  outline: none;
+
+  transition: .2s;
+
+  &:focus {
+    border-color: $primary;
+  }
+}

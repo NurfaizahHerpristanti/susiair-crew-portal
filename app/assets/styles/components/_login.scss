@@ -1,0 +1,45 @@
+@use "../abstracts/variables" as *;
+
+.login {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+}
+
+.login-card {
+  width: 100%;
+  max-width: 420px;
+
+  background: $surface;
+
+  border-radius: $radius-lg;
+
+  padding: 40px;
+
+  box-shadow: $shadow-md;
+}
+
+.login-title {
+  color: $primary;
+  font-size: 32px;
+  font-weight: 700;
+
+  margin-bottom: 8px;
+}
+
+.login-subtitle {
+  color: $text-secondary;
+
+  margin-bottom: 32px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+
+  gap: 20px;
+}
