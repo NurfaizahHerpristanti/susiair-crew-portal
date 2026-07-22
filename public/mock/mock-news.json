@@ -1,0 +1,22 @@
+{
+  "news": [
+    {
+      "id": 1,
+      "title": "New Flight Duty Regulations",
+      "date": "12 Jun 2026",
+      "summary": "Updated flight duty limitations are now effective for all pilots."
+    },
+    {
+      "id": 2,
+      "title": "Simulator Training Schedule",
+      "date": "10 Jun 2026",
+      "summary": "Simulator sessions for June have been published."
+    },
+    {
+      "id": 3,
+      "title": "Airport Operational Notice",
+      "date": "08 Jun 2026",
+      "summary": "Operational procedures have been updated for selected airports."
+    }
+  ]
+}

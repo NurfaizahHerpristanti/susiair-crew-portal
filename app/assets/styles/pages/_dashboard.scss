@@ -11,10 +11,36 @@
   margin-bottom: 28px;
 }
 
-.dashboard-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
+.dashboard-grid{
+
+display:grid;
+
+grid-template-columns:
+repeat(3,1fr);
+
+gap:20px;
+
+}
+
+@media(max-width:1200px){
+
+.dashboard-grid{
+
+grid-template-columns:
+repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:768px){
+
+.dashboard-grid{
+
+grid-template-columns:1fr;
+
+}
+
 }
 
 .dashboard-section {
@@ -50,7 +76,7 @@
 
   font-size: 40px;
   font-weight: 700;
-
+  margin: top 24px;
   color: $primary;
 }
 
@@ -82,4 +108,372 @@
 .status-danger {
   color: $danger;
   font-weight: 600;
+}
+
+.dashboard-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  margin-bottom:32px;
+}
+
+.dashboard-greeting{
+  color:#64748B;
+  font-size:14px;
+}
+
+.dashboard-name{
+  font-size:30px;
+  font-weight:700;
+
+  margin-top:4px;
+}
+
+.dashboard-hours{
+  color:#64748B;
+
+  margin-top:6px;
+}
+
+.dashboard-actions{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.notification-btn{
+  position:relative;
+
+  width:44px;
+  height:44px;
+
+  border:none;
+  border-radius:50%;
+
+  background:#F8FAFC;
+
+  cursor:pointer;
+
+  font-size:20px;
+}
+
+.notification-badge{
+  position:absolute;
+
+  top:2px;
+  right:2px;
+
+  width:18px;
+  height:18px;
+
+  border-radius:50%;
+
+  background:#EF4444;
+
+  color:white;
+
+  font-size:11px;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.avatar{
+  width:46px;
+  height:46px;
+
+  border-radius:50%;
+
+  background:#0B5CAB;
+
+  color:white;
+
+  font-weight:700;
+
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.section-title{
+  margin-bottom:16px;
+
+  font-size:20px;
+  font-weight:600;
+}
+
+.news-list{
+  display:flex;
+
+  gap:16px;
+
+  overflow-x:auto;
+
+  padding-bottom:8px;
+}
+
+.news-card{
+  min-width:280px;
+
+  flex-shrink:0;
+}
+
+.news-date{
+  color:#64748B;
+
+  font-size:13px;
+
+  margin-bottom:8px;
+}
+
+.news-title{
+  font-size:18px;
+
+  margin-bottom:10px;
+}
+
+.news-summary{
+  color:#64748B;
+
+  line-height:1.5;
+}
+
+.document-item{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+
+  padding:16px 0;
+
+  border-bottom:1px solid #E5E7EB;
+}
+
+.document-item:last-child{
+  border-bottom:none;
+}
+
+.document-name{
+  font-weight:600;
+
+  margin-bottom:4px;
+}
+
+.document-badge{
+  padding:6px 10px;
+
+  border-radius:999px;
+
+  font-size:12px;
+
+  font-weight:600;
+}
+
+.status-safe{
+  background:#DCFCE7;
+  color:#15803D;
+}
+
+.status-warning{
+  background:#FEF3C7;
+  color:#B45309;
+}
+
+.status-danger{
+  background:#FEE2E2;
+  color:#B91C1C;
+}
+
+.chart-toggle {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.chart-toggle button {
+  padding: 6px 14px;
+  border: none;
+  border-radius: 999px;
+  background: #e5e7eb;
+  cursor: pointer;
+  transition: .2s;
+}
+
+.chart-toggle button.active {
+  background: #e63757;
+  color: white;
+}
+
+main{
+padding-bottom:90px;
+}
+
+@media(max-width:768px){
+
+.app-sidebar{
+display:none;
+}
+
+}
+
+button:active{
+
+transform:scale(.96);
+
+}
+
+@media(max-width:768px){
+
+.bottom-nav{
+
+display:flex;
+
+}
+
+}
+
+.dashboard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.dashboard-name {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.dashboard-hours {
+  margin-top: 8px;
+  color: #64748b;
+}
+
+.dashboard-section {
+  width: 100%;
+}
+
+.dashboard-grid {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* ===========================
+   Hours To Limit
+=========================== */
+
+.hours-card__title {
+  margin-bottom: 24px;
+}
+
+.hours-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  font-size: 15px;
+}
+
+.hours-row span {
+  color: #64748b;
+}
+
+.hours-row strong {
+  font-size: 16px;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.hours-divider {
+  margin: 16px 0 20px;
+  border: none;
+  border-top: 1px solid #e5e7eb;
+}
+
+.hours-progress {
+  width: 100%;
+  height: 10px;
+  background: #e5e7eb;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.hours-progress__fill {
+  height: 100%;
+  border-radius: inherit;
+  transition: width .3s ease;
+}
+
+.hours-status {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 18px;
+  font-weight: 600;
+}
+
+.status-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+}
+
+.status-dot.safe {
+  background: #22c55e;
+}
+
+.status-dot.warning {
+  background: #f59e0b;
+}
+
+.status-dot.danger {
+  background: #ef4444;
+}
+
+.hours-remaining {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+.hours-remaining {
+  font-size: 42px;
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.hours-remaining small {
+  margin-top: 4px;
+  font-size: 14px;
+  color: #64748b;
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media (max-width: 1200px) {
+  .dashboard-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .dashboard-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
 }

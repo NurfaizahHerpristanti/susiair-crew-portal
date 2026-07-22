@@ -1,0 +1,14 @@
+{
+  "flight": {
+    "date": "2026-06-18",
+    "time": "08:30 - 11:10",
+    "departure": {
+      "icao": "WADD",
+      "city": "Denpasar"
+    },
+    "arrival": {
+      "icao": "WABB",
+      "city": "Biak"
+    }
+  }
+}

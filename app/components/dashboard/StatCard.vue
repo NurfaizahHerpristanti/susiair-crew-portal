@@ -3,6 +3,7 @@ interface Props {
   title: string
   value: string | number
   subtitle?: string
+  icon?: string
 }
 
 defineProps<Props>()
@@ -10,6 +11,13 @@ defineProps<Props>()
 
 <template>
   <div class="stat-card">
+    <div
+      v-if="icon"
+      class="stat-card__icon"
+    >
+      {{ icon }}
+    </div>
+
     <p class="stat-card__title">
       {{ title }}
     </p>

@@ -1,0 +1,98 @@
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 24px;
+}
+
+.calendar-weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  text-align: center;
+
+  margin-bottom: 16px;
+
+  font-weight: 600;
+
+  color: #64748B;
+}
+
+.calendar-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+
+  gap: 12px;
+}
+
+.calendar-cell {
+  min-height: 80px;
+
+  border: 1px solid #E5E7EB;
+
+  border-radius: 12px;
+
+  padding: 8px;
+
+  background: white;
+}
+
+.calendar-cell--empty {
+  border: none;
+
+  background: transparent;
+}
+
+.calendar-day{
+  font-weight:700;
+}
+
+.calendar-duty{
+  margin-top:8px;
+
+  padding:4px 8px;
+
+  border-radius:999px;
+
+  color:white;
+
+  font-size:12px;
+
+  width:fit-content;
+}
+
+.calendar-legend {
+  margin-top: 32px;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+
+  gap: 12px;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+}
+
+.legend-color {
+  width: 14px;
+  height: 14px;
+
+  border-radius: 50%;
+}
+
+.legend-code {
+  font-weight: 600;
+
+  min-width: 36px;
+}
+
+.legend-label {
+  color: #64748b;
+
+  font-size: 14px;
+}

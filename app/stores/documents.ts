@@ -1,14 +1,12 @@
 import { defineStore } from "pinia"
-import data from "../../public/mock/mock-documents.json"
+import mockDocuments from "../../public/mock/mock-documents.json"
 
 export const useDocumentsStore = defineStore("documents", {
   state: () => ({
-    data,
-  }),
+    today: mockDocuments.today,
 
-  getters: {
-    documents: (state) => state.data.documents,
-    today: (state) => state.data.today,
-    warningDays: (state) => state.data.thresholds.warningDays,
-  },
+    thresholds: mockDocuments.thresholds,
+
+    documents: mockDocuments.documents,
+  }),
 })
