@@ -11,7 +11,14 @@ This project is a frontend implementation of a pilot dashboard that helps crew m
 ## Login
 
 ![Login](./assets/screenshots/Login.png)
+Memasukkan username dan password (mock), yaitu:
+- usn: captain@susiair.com
+- pass: captain123
 
+atau
+
+- usn: admin@susiair.com
+- pass: admin123
 ---
 
 ## Dashboard
@@ -21,6 +28,11 @@ This project is a frontend implementation of a pilot dashboard that helps crew m
 (./assets/screenshots/Dashboard2.png)
 (./assets/screenshots/Dashboard3.png)
 (./assets/screenshots/Dashboard4.png)
+
+[Preview Mobile Dashboar]
+(./assets/screenshots/Dashboard1.png)
+How to: F12 (Developer mode) then change the 'Dimension'
+
 
 ---
 
@@ -123,7 +135,7 @@ app
 Clone this repository
 
 ```bash
-git clone https://github.com/nurfaizah/susiair-crew-portal.git
+git clone https://github.com/NurfaizahHerpristanti/susiair-crew-portal.git
 ```
 
 Install dependencies
@@ -176,8 +188,8 @@ Optimized for
 
 Computer Science Graduate — BINUS University
 
-GitHub: https://github.com/yourusername
+GitHub: https://github.com/NurfaizahHerpristanti
 
-LinkedIn: https://linkedin.com/in/yourlinkedin
+LinkedIn: Nurfaizah Herpristanti
 
 ---

@@ -4,19 +4,52 @@ export const useAuthStore = defineStore("auth", () => {
   const token = useCookie<string | null>("crew-token")
 
   const user = ref<{
-    email: string
-    name: string
-  } | null>(null)
+  email: string
+  name: string
+  role: string
+} | null>(null)
 
   const isAuthenticated = computed(() => !!token.value)
 
-  function login(email: string) {
-    token.value = "logged-in"
+ const accounts = [
+    {
+      email: "captain@susiair.com",
+      password: "captain123",
+      name: "Captain John Doe",
+      role: "Captain",
+    },
+    {
+      email: "copilot@susiair.com",
+      password: "copilot123",
+      name: "First Officer Jane",
+      role: "First Officer",
+    },
+    {
+      email: "admin@susiair.com",
+      password: "admin123",
+      name: "Crew Admin",
+      role: "Admin",
+    },
+  ]
+
+   function login(email: string, password: string) {
+    const account = accounts.find(
+      (a) => a.email === email && a.password === password,
+    )
+
+    if (!account) {
+      return false
+    }
+
+    token.value = crypto.randomUUID()
 
     user.value = {
-      email,
-      name: "John Doe",
+      email: account.email,
+      name: account.name,
+      role: account.role,
     }
+
+    return true
   }
 
   function logout() {

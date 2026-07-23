@@ -5,9 +5,22 @@ const auth = useAuthStore()
 
 const email = ref("")
 const password = ref("")
+const errorMessage = ref("")
 
 function login() {
-  auth.login(email.value)
+  errorMessage.value = ""
+
+  const success = auth.login(
+    email.value,
+    password.value,
+  )
+  
+
+  if (!success) {
+    errorMessage.value = "Invalid email or password"
+    return
+  }
+
   navigateTo("/dashboard")
 }
 
@@ -27,7 +40,7 @@ definePageMeta({
 
       <h1>Crew Portal</h1>
 
-      <p>Welcome back</p>
+      <p>Welcome back!</p>
 
       <input
         v-model="email"
@@ -40,9 +53,31 @@ definePageMeta({
         placeholder="Password"
       >
 
+      <p
+  v-if="errorMessage"
+  class="login-error"
+>
+  {{ errorMessage }}
+</p>
+
       <button @click="login">
         Sign In
       </button>
+      <div class="demo-account">
+  <h4>Demo Accounts</h4>
+
+  <p>
+    <strong>Captain</strong><br>
+    usn: captain@susiair.com<br>
+    pass: captain123
+  </p>
+
+  <p>
+    <strong>Admin</strong><br>
+    usn: admin@susiair.com<br>
+    pass: admin123
+  </p>
+</div>
     </div>
   </div>
 </template>
@@ -88,5 +123,32 @@ color:white;
 border-radius:12px;
 font-weight:700;
 cursor:pointer;
+}
+
+.login-error{
+margin-top:12px;
+color:#E63757;
+font-size:14px;
+font-weight:600;
+}
+
+.demo-account{
+  margin-top:28px;
+  padding:16px;
+  background:#F8F9FB;
+  border-radius:12px;
+  text-align:left;
+  font-size:13px;
+  color:#666;
+}
+
+.demo-account h4{
+  margin-bottom:10px;
+  color:#222;
+}
+
+.demo-account p{
+  margin-top:10px;
+  line-height:1.6;
 }
 </style>
